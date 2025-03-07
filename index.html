@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Scheduling</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Schedule an Appointment</h1>
+        <div class="card shadow-lg border-0 rounded-lg">
+            <div class="card-body">
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" class="form-control" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor">Select Doctor:</label>
+                        <select id="doctor" name="doctor" class="form-control" required>
+                            <option value="Dr. Ahmad (Neurologist)">Dr. Ahmad (Neurologist)</option>
+                            <option value="Dr. Fatima (Dermatologist)">Dr. Fatima (Dermatologist)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientId">Patient ID:</label>
+                        <input type="number" class="form-control" id="patientId" name="patientId" min="100" max="1999" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hour">Requested Hour (9-17):</label>
+                        <input type="number" class="form-control" id="hour" name="hour" min="9" max="17" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Appointment Duration:</label>
+                        <select id="duration" name="duration" class="form-control" required>
+                            <option value="15">15 minutes</option>
+                            <option value="30">30 minutes</option>
+                            <option value="45">45 minutes</option>
+                            <option value="60">60 minutes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Appointment Date:</label>
+                        <input type="date" class="form-control" id="date" name="date" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Schedule Appointment</button>
+                </form>
+                <p id="message" class="text-center mt-3"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
